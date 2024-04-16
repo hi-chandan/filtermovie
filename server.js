@@ -1,4 +1,4 @@
-const config = require("dotenv").config();
+const config = require("dotenv");
 const express = require("express");
 const dbConnect = require("./dbConnect");
 const movieRoutes = require("./routes/movies");
@@ -7,9 +7,6 @@ const cors = require("cors");
 const app = express();
 dbConnect();
 
-config({
-  path: "./database/config.env",
-});
 app.use(express.json());
 app.use(
   cors({
