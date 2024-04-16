@@ -10,7 +10,7 @@ dbConnect();
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.frontend,
+    origin: "",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
