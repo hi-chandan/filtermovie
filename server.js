@@ -1,4 +1,4 @@
-require("dotenv").config();
+const config = require("dotenv").config();
 const express = require("express");
 const dbConnect = require("./dbConnect");
 const movieRoutes = require("./routes/movies");
