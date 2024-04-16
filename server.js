@@ -7,6 +7,9 @@ const cors = require("cors");
 const app = express();
 dbConnect();
 
+config({
+  path: "./database/config.env",
+});
 app.use(express.json());
 app.use(
   cors({
@@ -18,9 +21,10 @@ app.use(
 
 app.use("/api/", movieRoutes);
 
-app.use(express.static(path.join(path.resolve(), "/frontend/dist")));
+app.use(express.static(path.join(__dirname, "./frontend/dist")));
+
 app.get("*", (req, res) => {
-  res.sendFile(path.join(path.resolve(), "frontend/dist/index.html"));
+  res.sendFile(path.resolve(__dirname, "./frontend/dist/index.html"));
 });
 
 const port = process.env.PORT || 3000;
