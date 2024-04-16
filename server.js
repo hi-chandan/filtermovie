@@ -17,10 +17,10 @@ app.use(
 
 app.use("/api/", movierouter);
 
-app.use(express.static(path.join(path.resolve(), "/frontend/dist")));
+app.use(express.static(path.join(path.resolve(), "/frontend/build")));
 console.log(path.join(path.resolve(), "/frontend/dist/index.html"));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(path.resolve(), "frontend/dist/index.html"));
+  res.sendFile(path.join(path.resolve(), "frontend/build/index.html"));
 });
 
 const port = process.env.PORT || 3000;
