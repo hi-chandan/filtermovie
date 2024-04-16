@@ -4,7 +4,7 @@
   "description": "pagination, filter and sorting",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "dev": "node server.js"
   },
   "author": "Jahangeer",
   "license": "ISC",
