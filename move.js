@@ -1,7 +1,6 @@
-const dbConnect = require("./dbConnect");
-const Movie = require("./models/Movie");
-const Move = require("./config/movies.json");
-
+import dbConnect from "./dbConnect.js";
+import Movie from "./models/Movie.js";
+import move from "./config/movies.json";
 const start = async () => {
   try {
     await dbConnect();

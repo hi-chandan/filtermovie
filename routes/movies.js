@@ -1,7 +1,6 @@
-const router = require("express").Router();
-const Movie = require("../models/Movie");
-// const movies = require("../config/movies.json");
-
+import { Movie } from "../models/Movie.js";
+import express from "express";
+const router = express.Router();
 router.get("/movies", async (req, res) => {
   try {
     const page = parseInt(req.query.page) - 1 || 0;
@@ -63,4 +62,4 @@ router.get("/movies", async (req, res) => {
   }
 });
 
-module.exports = router;
+export const movierouter = router;
